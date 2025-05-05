@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Enter Your Vitals</h2>
+    <form method="post" action="/predict">
+        Age: <input type="number" name="age" step="any" required><br><br>
+        Blood Pressure: <input type="number" name="bp" step="any" required><br><br>
+        Cholesterol: <input type="number" name="cholesterol" step="any" required><br><br>
+        Max Heart Rate: <input type="number" name="max_hr" step="any" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <h3>{{ result }}</h3>
+</body>
+</html>
